@@ -10,10 +10,13 @@ To use:
 4. Ensure that the newly generated .jar file is available in the path `/opt/zdp/zdp-gateway/lib/plugins/lookup/` where zdp-gateway is sinalled.
 4. Define the association relationship as below:
 ```yaml
-relationship.kind: "ASSOCIATION",
-relationship.target: "<target name of the object. This value should match the string getType method of the plugin returns.>",
-relationship.cardinality: "1.1" OR "1.*",
-relationship.source: "The attribute for which the asset instances will be listed out from the target asset type. "
+relationship.kind: "ASSOCIATION"
+# target name of the object. This value should match the string getType method of the plugin returns.
+relationship.target: <target name>
+# "1.1" OR "1.*",
+relationship.cardinality: "1.1" 
+# The attribute for which the asset instances will be listed out from the target asset type.
+relationship.source: " "
 ```
 5. Restart zdp-gateway service.
 6. Go to the Arena UI to apply the associations.
