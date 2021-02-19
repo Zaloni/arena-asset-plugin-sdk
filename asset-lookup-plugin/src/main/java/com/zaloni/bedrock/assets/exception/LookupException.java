@@ -16,6 +16,14 @@
 package com.zaloni.bedrock.assets.exception;
 
 public class LookupException extends Exception{
+	
+	public enum LookupError{
+		OBJECT_NOT_FOUND;
+	}
+	
+	private LookupError lookupError;
+	
+	private LookupErrorContext lookupErrorContext;
 
 	/**
 	 * 
@@ -37,4 +45,31 @@ public class LookupException extends Exception{
 	public LookupException(Throwable throwable) {
 		super(throwable);
 	}
+	
+	public LookupException(LookupError lookupError) {
+		super(lookupError.toString());
+		this.lookupError = lookupError;	
+	}
+	
+	public LookupException(LookupError lookupError,LookupErrorContext lookupErrorContext) {
+		super(lookupError.toString());
+		this.lookupError = lookupError;	
+		this.lookupErrorContext = lookupErrorContext;
+	}
+
+	public LookupError getLookupError() {
+		return lookupError;
+	}
+
+	public void setLookupError(LookupError lookupError) {
+		this.lookupError = lookupError;
+	}
+
+	public LookupErrorContext getLookupErrorContext() {
+		return lookupErrorContext;
+	}
+
+	public void setLookupErrorContext(LookupErrorContext lookupErrorContext) {
+		this.lookupErrorContext = lookupErrorContext;
+	}	
 }
