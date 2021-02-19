@@ -99,4 +99,10 @@ public interface LookupService {
 	 */
 	Object fetchObjectDetails(String ... arguments);
 	
+	/**
+	 * Method to return the identifier key for the object through wich it can be referenced
+	 * @return
+	 */
+	Object getReferenceKey();
+	
 }
