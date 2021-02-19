@@ -97,7 +97,7 @@ public interface LookupService {
 	 * 
 	 * @return
 	 */
-	Object fetchObjectDetails(String ... arguments);
+	Object fetchObjectDetails(String ... arguments) throws LookupException;;
 	
 	/**
 	 * Method to return the identifier key for the object through wich it can be referenced
