@@ -26,6 +26,7 @@ public class SchemaDetail {
 	
 	private String attributeName;
 	private DataType dataType;
+	private boolean identifier;
 	
 	public String getAttributeName() {
 		return attributeName;
@@ -44,6 +45,15 @@ public class SchemaDetail {
 
 	public void setDataType(DataType dataType) {
 		this.dataType = dataType;
+	}
+	
+	public boolean isIdentifier() {
+		return identifier;
+	}
+
+
+	public void setIdentifier(boolean identifier) {
+		this.identifier = identifier;
 	}
 	
 	public enum DataType {
