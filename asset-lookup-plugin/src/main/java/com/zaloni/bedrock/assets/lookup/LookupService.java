@@ -97,6 +97,22 @@ public interface LookupService {
 	 * 
 	 * @return
 	 */
-	Object fetchObjectDetails(String ... arguments);
+	Object fetchObjectDetails(String ... arguments) throws LookupException;;
+	
+	/**
+	 * Method to return the identifier key for the object through wich it can be referenced
+	 * @return
+	 */
+	Object getReferenceKey();
+	
+	/**
+	 * Ability to define the label name that will be used to display association in the front end. The label name should be part of the index storage.
+	 * If label is not specified, fist element from index storage will be treated as the label.
+	 * @return
+	 */
+	default String getLabel() {
+		List<String> indexStorageList = getIndexStorage();
+		return indexStorageList ==null || indexStorageList.isEmpty() ? "" : indexStorageList.get(0);
+	}
 	
 }
