@@ -18,7 +18,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.zaloni.bedrock</groupId>
     <artifactId>asset-lookup-plugin</artifactId>
-    <version>6.2.0</version>
+    <version>6.3.0</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>API used to create lookup plugins for Arena by Zaloni.</description>
     <url>https://github.com/Zaloni/arena-asset-plugin-sdk</url>
